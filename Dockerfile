@@ -13,7 +13,7 @@ USER 1000
 RUN mkdir /home/rf/app
 WORKDIR /home/rf/app
 
-RUN curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/9f93df1140efd44f37d07fc04fe5eb9abdc105db/get-poetry.py | python
+RUN curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/d2fd581c9a856a5c4e60a25acb95d06d2a963cf2/get-poetry.py | python - --version 1.0.10
 RUN poetry config virtualenvs.create false
 
 COPY --chown=rf:rf pyproject.toml poetry.lock ./
